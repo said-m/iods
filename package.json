@@ -1,0 +1,24 @@
+{
+  "name": "iods",
+  "version": "1.0.0",
+  "description": "TypeScript pattern of method declarations",
+  "keywords": [
+    "iods",
+    "types",
+    "pattern",
+    "interface",
+    "TypeScript"
+  ],
+  "main": "index.d.ts",
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts"
+  ],
+  "author": "Said Magomedov <saids.inbox@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/said-m/iods.git"
+  },
+  "bugs": "https://github.com/said-m/iods/issues"
+}
