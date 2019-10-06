@@ -2,8 +2,10 @@
 /** Входные параметры методов и функций */
 export type InputInterface<
   Data = unknown,
-  Settings = undefined
-> = Settings extends undefined  // проверка наличия Опции
+  Settings extends {
+    [key: string]: any
+  } | void = void,
+> = Settings extends void  // проверка наличия Опции
 ? {
   /** Входные данные */
   data: Data;
