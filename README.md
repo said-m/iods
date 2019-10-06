@@ -23,8 +23,20 @@ type InputInterface<
 ## Установка
 
 ```bash
-yarn add iods -D
+yarn add iods -T -D
 ```
+или
+```bash
+npm i iods -E -D
+```
+
+### Версионирование
+
+Данный проект не придерживается `SemVer`. Отсутствие `breaking changes` гарантируется только в `patch`-версиях.
+
+Если вы предпочитаете строго не фиксировать версию, то рекомендуемый `semver range operator` - `~`.
+* `Yarn` позволяет это сделать при помощи флага `-T` при вызове команды установки пакета.
+* `NPM` же не имеет подобного аналога, но есть `-E` который фиксирует устанавливаемую версию, т.е. у версии будет отсутствовать какой-либо `semver range operator`. В таком случае, необходимо самостоятельно добавить `~` перед номером версии.
 
 ## Состав
 
@@ -51,6 +63,11 @@ yarn add iods -D
 + Принимая во внимание Исключения #2, `undefined` в ответе и `undefined` в `.data` ответа - не одно и тоже, т.е. есть пространство для манёвров *(типа просто `undefined` - негативный результат, а `undefined` в `.data` - позитив из ничего)*;
 + У автора теперь имеется возможность выёживаться тем, что он является автором чего-то там (точнее, тут).
 
+## Замечание
+
+Данный проект не придерживается `SemVer` и `GitFlow`.
+Причина подобного решения - это мелкий проект, изменения в котором происходят не часто. Как следствие, тикать `major` всякий раз, когда методология меняется и не совместима с предыдущей - выглядит глупо (а если учитывать суть проекта - то это вообще абсурд). Всё по тому же, отпадает необходимость в `develop`- и `release`-ветках, так как любая редкая правка - это полноценная версия, тут нечего "разрабатывать".
+
 ## Лицензия
 
 А на это вообще нужна лицензия? Если да, то эта... любимая, ну эта: `MIT License`. Текст с её сутью скопипастил в файл [LICENSE](LICENSE).
@@ -64,7 +81,11 @@ TypeScript pattern of method declarations.
 ### Installing
 
 ```bash
-yarn add iods -D
+yarn add iods -T -D
+```
+or
+```bash
+npm i iods -E -D
 ```
 
 ### Composition
@@ -89,6 +110,10 @@ yarn add iods -D
 + Fixed first level with 2 properties, instead of 2 arguments, openly demonstrates people that they should not even think about expanding the method with (an)other input argument(s);
 + Given the Exception #2, it becomes clear that `undefined` result and result`.data`'s `undefined` that it is not the same thing; *(I mean, `undefined` result - is kinda negative result, while `undefined` at result's `.data` - is kinda positive nothing :)*
 + Now, the author is who he is.
+
+### Note
+
+This project doesn't follow to `SemVer` or `GitFlow` rules.
 
 ### License
 
